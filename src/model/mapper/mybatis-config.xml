@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- /src/model/mapper/mybatis-config.xml -->
+<!-- 
+	configuration : 루트 태그
+	http://mybatis.org/dtd/mybatis-3-config.dtd : xml 양식을 지정 
+-->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org/DTD config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="model/mapper/mybatis.properties" />  <!-- 데이터베이스에 접근하도록 연결(데이터베이스가 변경되어도 리소스의 내용만 바꾸면 됨. java 소스 바뀔 필요 없음) -->
+	<environments default="development">   <!-- 데이터베이스 Connection 설정 -->
+		<environment id="development">
+			<transactionManager type="JDBC" />  <!--  DB가 transaction(commit, rollback) 권한을 가지고 있음 -->
+			<dataSource type="POOLED">          <!-- connection pool : 커넥션 객체를 미리 만들어 놓음 -->
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>   <!-- sql 구문 저장하는 xml, 인터페이스 설정 -->
+		<package name="model.mapper" />
+	</mappers>
+</configuration>

@@ -1,0 +1,28 @@
+/* /WebContent/css/main.css */
+@font-face { font-family: 'JSDongkang-Regular'; 
+			 src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff') format('woff'); 
+			 font-weight: normal; font-style: normal; }
+			 
+th, td, caption, input, h3, p{font-family: 'JSDongkang-Regular'};
+
+table{ 
+	width : 100%;
+	border-top : 1px solid #353535;
+	border-collapse: collapse;
+	padding : 10px;
+}
+th, td{
+	border-bottom : 1px solid #353535;
+	border-collapse: collapse;
+	text-align : center;
+	padding : 8px;
+}
+th { background-color : #A9D0F5; color : #353535; }
+td { background-color : #FAFAFA; }
+caption {
+	color : #111111; font-size : 20px;
+	
+}
+input[type=text],input[type=password],textarea{
+	width : 100%;
+}

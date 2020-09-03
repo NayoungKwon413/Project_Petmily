@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<!-- /WEB-INF/decorators.xml -->
+<decorators defaultdir="/layout">
+	<decorator name="member" page="memberlayout.jsp">
+		<pattern>/model2/*</pattern>
+	</decorator>
+	<excludes>
+		<pattern>/model2/member/id*</pattern>
+		<pattern>/model2/member/pw*</pattern>
+		<pattern>/model2/member/picture*</pattern>
+		<pattern>/model2/member/password*</pattern>
+		<pattern>/model2/ajax/*</pattern>
+		<pattern>/model2/dailycare/dcinsertForm*</pattern>
+		<pattern>/model2/dailycare/support*</pattern>
+		<pattern>/model2/dailycare/dcmemoForm*</pattern>
+		<pattern>/model2/dailycare/dcupdateForm*</pattern>
+		<pattern>/model2/calendar/addplanForm*</pattern>
+		<pattern>/model2/board/repupdateForm*</pattern>
+		<pattern>/model2/calendar/planview*</pattern>
+		<pattern>/model2/calendar/planupdateForm*</pattern>
+	</excludes>
+</decorators>
